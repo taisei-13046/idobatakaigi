@@ -17,7 +17,7 @@ const MessageInputField = (props) => {
 	const {name} = props;
 	const [text, setText] = useState('');
 	const classes = useStyles();
-	const avatarPath = gravatarPath('aaa');
+	const avatarPath = gravatarPath('aaa@gmail.com');
 	return (
 		<div className={classes.root}>
 			<Grid container >
@@ -27,7 +27,7 @@ const MessageInputField = (props) => {
 				<Grid xs={10}>
 					<MessageField name={name} setText={setText} text={text} />
 				</Grid>
-				<Grid sx={1}>
+				<Grid xs={1}>
 					ボタン
 				</Grid>
 			</Grid>
