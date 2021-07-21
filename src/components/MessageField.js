@@ -4,7 +4,7 @@ import {TextField} from "@material-ui/core"
 import {pushMessage} from "../firebase"
 
 const MessageField = (props) => {
-	const {name, setText, text} = props;
+	const {name, setText, text, inputEL} = props;
 	const [isComposed, setIsComposed] = useState(false)
 	console.log(text)
 	return (
@@ -24,6 +24,8 @@ const MessageField = (props) => {
 			onCompositionStart={() => setIsComposed(true)}
 			onCompositionEnd={() => setIsComposed(false)}
 			value={text}
+			autoFocus
+			inputRef={inputEL}
 		/>
 	)
 }
