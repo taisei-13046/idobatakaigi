@@ -6,7 +6,6 @@ import {pushMessage} from "../firebase"
 const MessageField = (props) => {
 	const {name, setText, text, inputEL} = props;
 	const [isComposed, setIsComposed] = useState(false)
-	console.log(text)
 	return (
 		<TextField
 			fullWidth={true}
