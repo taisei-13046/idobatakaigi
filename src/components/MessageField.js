@@ -13,10 +13,12 @@ const MessageField = (props) => {
 				setText(e.target.value);
 			}}
 			onKeyDown={(e) => {
+				if (isComposed)
+					return;
 				if (e.key === "Enter" && e.target.value !== '')
 				{
-					pushMessage({ name: "ytaisei", text });
 					e.preventDefault();
+					pushMessage({ name, text });
 					setText('')
 				}
 			  }}
