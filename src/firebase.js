@@ -20,7 +20,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
-export const messagesRef = database.ref('messages');
+export const messagesRef = database.ref('messages')
 
 export const pushMessage = (props) => {
 	const { name, text } = props;
